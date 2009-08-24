@@ -11,12 +11,12 @@ spec = Gem::Specification.new do |s|
   s.email = "david.withers@manchester.ac.uk"
   s.homepage = "http://www.mygrid.org.uk/"
   
-  s.files = ["test/fixtures", "test/fixtures/animal.xml", "test/fixtures/colouranimal.xml", "test/tc_client.rb", "test/ts_taverna.rb", "lib/baclava", "lib/baclava/reader.rb", "lib/baclava/writer.rb", "lib/document", "lib/document/data.rb", "lib/document/report.rb", "lib/enactor", "lib/enactor/client.rb", "lib/scufl", "lib/scufl/dot.rb", "lib/scufl/model.rb", "lib/scufl/parser.rb", "README", "LICENCE"]
-  s.extra_rdoc_files = ["README", "LICENCE"]
+  s.files = ["test/fixtures", "test/fixtures/animal.xml", "test/fixtures/colouranimal.xml", "test/tc_client.rb", "test/ts_taverna.rb", "lib/baclava", "lib/baclava/reader.rb", "lib/baclava/writer.rb", "lib/document", "lib/document/data.rb", "lib/document/report.rb", "lib/enactor", "lib/enactor/client.rb", "lib/scufl", "lib/scufl/dot.rb", "lib/scufl/model.rb", "lib/scufl/parser.rb", "README.rdoc", "LICENCE"]
+  s.extra_rdoc_files = ["README.rdoc", "LICENCE"]
   s.test_files = ["test/ts_taverna.rb"]
   s.has_rdoc = true
   
-  s.rdoc_options = ["-N", "--tab-width=2", "--main=README", "--exclude='scufl.gemspec|test'"]
+  s.rdoc_options = ["-N", "--tab-width=2", "--main=README.rdoc", "--exclude='scufl.gemspec|test'"]
   
   s.autorequire = "baclava, client, document, scufl"
   s.require_paths = ["lib"]
