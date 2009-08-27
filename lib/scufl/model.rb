@@ -50,7 +50,7 @@ module Scufl # :nodoc:
     
     def get_beanshells(given_model, beans_collected) # :nodoc:
       wf_procs = given_model.processors.select { |x| x.type == "workflow" }
-      wf_procs.each { |x| get_beanshells(x.model, beans_collected) }
+      wf_procs.each { |x| get_beanshells(x.model, beans_collected) if x.model }
       
       bean_procs = given_model.processors.select { |b| b.type == "beanshell" }
       bean_procs.each { |a| beans_collected << a }
