@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: Scufl::ProcessorsLinkedTo</title>
+	<title>Class: Scufl::ProcessorLinks</title>
 
 	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
 
@@ -104,7 +104,7 @@
 				
 					<li><a href="../Scufl/Processor.html">Scufl::Processor</a></li>
 				
-					<li><a href="../Scufl/ProcessorsLinkedTo.html">Scufl::ProcessorsLinkedTo</a></li>
+					<li><a href="../Scufl/ProcessorLinks.html">Scufl::ProcessorLinks</a></li>
 				
 					<li><a href="../Scufl/Sink.html">Scufl::Sink</a></li>
 				
@@ -143,14 +143,17 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">Scufl::ProcessorsLinkedTo</h1>
+		<h1 class="class">Scufl::ProcessorLinks</h1>
 
 		<div id="description">
 			<p>
-This object is returned after invoking
-model.get_processors_linked_to(processor). The object contains two lists of
-processors.
+This object is returned after invoking model.get_processor_links(processor)
+. The object contains two lists of processors. Each element has
 </p>
+<pre>
+ a name of the processor and the port used for the linking,
+ seperated by a colon (:) i.e. &quot;name_of_processor:port_name&quot;
+</pre>
 
 		</div>
 

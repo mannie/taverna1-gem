@@ -43,7 +43,12 @@ module Scufl # :nodoc:
     
     # Retrieve ALL the beanshell processors WITHIN the given workflow model.
     def beanshells
-      return get_beanshells(self, [])
+      self.all_processors.select { |x| x.type == "beanshell" }
+    end
+    
+    # Retrieve ALL processors of that are webservices WITHIN the model.
+    def web_services
+      self.all_processors.select { |x| x.type =~ /wsdl|soaplab|biomoby/i }
     end
     
     # Retrieve ALL processor objects WITHIN the given workflow model.
@@ -74,35 +79,21 @@ module Scufl # :nodoc:
     #   linked_processors = model.get_processors_linked_to(my_processor)
     #   processors_feeding_into_my_processor = linked_processors.sources
     #   processors_feeding_from_my_processor = linked_processors.sinks    
-    def get_processors_linked_to(processor)
+    def get_processor_links(processor)
       return nil unless processor
-      obj_with_linked_procs = ProcessorsLinkedTo.new
+      proc_links = ProcessorLinks.new
       
       # SOURCES
-      processor_names = []
-      links_with_proc_name = self.all_links.select{ |x|
-        x.sink =~ /#{processor.name}/ 
-      }
-      links_with_proc_name.each { |x| 
-        processor_names << x.source.split(":")[0] 
-      }
-      obj_with_linked_procs.sources = self.all_processors.select { |proc| 
-        processor_names.include?(proc.name)
-      }
+      sources = self.all_links.select{ |x| x.sink =~ /#{processor.name}/ }
+      proc_links.sources = []
+      sources.each { |x| proc_links.sources << x.source }
       
       # SINKS
-      processor_names = []
-      links_with_proc_name = self.all_links.select{ |x| 
-        x.source =~ /#{processor.name}/ 
-      }
-      links_with_proc_name.each { |x| 
-        processor_names << x.sink.split(":")[0] 
-      }
-      obj_with_linked_procs.sinks = self.all_processors.select { |proc|  
-        processor_names.include?(proc.name)
-      }
+      sinks = self.all_links.select{ |x| x.source =~ /#{processor.name}/ }
+      proc_links.sinks = []
+      sinks.each { |x| proc_links.sinks << x.sink }
       
-      return obj_with_linked_procs
+      return proc_links
     end
     
     private
@@ -210,10 +201,11 @@ module Scufl # :nodoc:
 
 
 
-  # This object is returned after invoking 
-  # model.get_processors_linked_to(processor).  The object contains two lists 
-  # of processors.
-  class ProcessorsLinkedTo
+  # This object is returned after invoking model.get_processor_links(processor)
+  # .  The object contains two lists of processors.  Each element has
+  #  a name of the processor and the port used for the linking,
+  #  seperated by a colon (:) i.e. "name_of_processor:port_name"
+  class ProcessorLinks
     # The processors whose output is fed as input into the processor used in
     # model.get_processors_linked_to(processor).
     attr_accessor :sources
@@ -221,13 +213,8 @@ module Scufl # :nodoc:
     # A list of processors that are fed the output from the processor (used in
     # model.get_processors_linked_to(processor) ) as input.
     attr_accessor :sinks
-    
-    def initialize # :nodoc:
-      sources = []
-      sinks = []
-    end
   end
-
+  
 
   
   # This contains basic descriptive information about the workflow model.
