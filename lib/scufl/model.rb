@@ -87,6 +87,26 @@ module Scufl # :nodoc:
     
     # This is a list of outputs that the processor can produce.
     attr_accessor :outputs
+    
+    # For processors of type "arbitrarywsdl", this is the URI to the location
+    # of the wsdl file.
+    attr_accessor :wsdl
+    
+    # For processors of type "arbitrarywsdl", this is the operation invoked.
+    attr_accessor :wsdl_operation
+    
+    # For soaplab and biomoby services, this is the endpoint URI.
+    attr_accessor :endpoint
+    
+    # Authority name for the biomoby service.
+    attr_accessor :biomoby_authority_name
+
+    # Service name for the biomoby service. This is not necessarily the same 
+    # as the processors name.
+    attr_accessor :biomoby_service_name
+    
+    # Category for the biomoby service.
+    attr_accessor :biomoby_category
   end
 
 

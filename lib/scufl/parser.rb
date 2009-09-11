@@ -105,6 +105,29 @@ module Scufl
         case e.name
           when 'description'
             processor.description = e.text
+          when 'arbitrarywsdl'
+            processor.type = e.name
+            e.each_element do |wsdl|
+              processor.wsdl = wsdl.text if wsdl.name == 'wsdl'
+              processor.wsdl_operation = wsdl.text if wsdl.name == 'operation'
+            end
+          when 'soaplabwsdl'
+            processor.type = e.name
+            processor.endpoint = e.text
+          when 'biomobywsdl'
+            processor.type = e.name
+            e.each_element do |wsdl|
+              case wsdl.name
+                when /endpoint/i
+                  processor.endpoint = wsdl.text
+                when /servicename/i
+                  processor.biomoby_service_name = wsdl.text
+                when /authorityname/i
+                  processor.biomoby_authority_name = wsdl.text
+                when "category"
+                  processor.biomoby_category = wsdl.text
+              end
+            end
           when'beanshell'
             processor.type = e.name
             e.each_element do |bean|

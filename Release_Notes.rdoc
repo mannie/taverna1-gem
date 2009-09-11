@@ -1,0 +1,8 @@
+= Version 0.6.2
+Released:: 
+
+== Bug fixes
+- x
+
+== Added Functionality
+- Extraction of more metadata for soaplab and biomoby services, and artitrary wsdls.

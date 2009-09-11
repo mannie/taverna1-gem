@@ -2,8 +2,8 @@
 
 spec = Gem::Specification.new do |s| 
   s.name = "taverna-scufl"
-  s.version = "0.6.1"
-  s.date = "2009-08-27"
+  s.version = "0.6.2"
+#  s.date = "2009-09-11"
   s.summary = "Support for interacting with the Taverna workflow system (Scufl)."
   s.description = "This a gem developed by myGrid for the purpose of interacting with Taverna 1 workflows.  An example use would be the image genaration for the model representing Taverna 1 workflows as used in myExperiment."
 
@@ -11,8 +11,8 @@ spec = Gem::Specification.new do |s|
   s.email = "david.withers@manchester.ac.uk"
   s.homepage = "http://www.mygrid.org.uk/"
   
-  s.files = ["test/fixtures", "test/fixtures/animal.xml", "test/fixtures/colouranimal.xml", "test/tc_client.rb", "test/ts_taverna.rb", "lib/baclava", "lib/baclava/reader.rb", "lib/baclava/writer.rb", "lib/document", "lib/document/data.rb", "lib/document/report.rb", "lib/enactor", "lib/enactor/client.rb", "lib/scufl", "lib/scufl/dot.rb", "lib/scufl/model.rb", "lib/scufl/parser.rb", "README.rdoc", "LICENCE"]
-  s.extra_rdoc_files = ["README.rdoc", "LICENCE"]
+  s.files = ["test/fixtures", "test/fixtures/animal.xml", "test/fixtures/colouranimal.xml", "test/tc_client.rb", "test/ts_taverna.rb", "lib/baclava", "lib/baclava/reader.rb", "lib/baclava/writer.rb", "lib/document", "lib/document/data.rb", "lib/document/report.rb", "lib/enactor", "lib/enactor/client.rb", "lib/scufl", "lib/scufl/dot.rb", "lib/scufl/model.rb", "lib/scufl/parser.rb", "README.rdoc", "LICENCE", "Release_Notes.rdoc"]
+  s.extra_rdoc_files = ["README.rdoc", "LICENCE", "Release_Notes.rdoc"]
   s.test_files = ["test/ts_taverna.rb"]
   s.has_rdoc = true
   
