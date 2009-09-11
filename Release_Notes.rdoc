@@ -1,8 +1,8 @@
-= Version 0.6.2
-Released:: Friday, September 11, 2009
+= Version 0.7.0
+Released:: 
 
 == Bug fixes
-- none
+- x
 
 == Added Functionality
-- Extraction of more metadata for soaplab and biomoby services, and artitrary wsdls.
+- Retrieval of processors directly connected/linked to the given processor.

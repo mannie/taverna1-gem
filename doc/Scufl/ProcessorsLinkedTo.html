@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: Enactor::CouldNotCreateError</title>
+	<title>Class: Scufl::ProcessorsLinkedTo</title>
 
 	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
 
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="../lib/enactor/client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/enactor/client.rb">lib/enactor/client.rb</a></li>
+						<li><a href="../lib/scufl/model_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/scufl/model.rb">lib/scufl/model.rb</a></li>
 					
 					</ul>
 				</div>
@@ -45,7 +45,7 @@
 			<div id="parent-class-section" class="section">
 				<h3 class="section-header">Parent</h3>
 				
-				<p class="link">TavernaServiceError</p>
+				<p class="link">Object</p>
 				
 			</div>
 			
@@ -54,15 +54,6 @@
 			
 
 			<!-- Method Quickref -->
-			
-			<div id="method-list-section" class="section">
-				<h3 class="section-header">Methods</h3>
-				<ul class="link-list">
-					
-					<li><a href="#M000020">::new</a></li>
-					
-				</ul>
-			</div>
 			
 
 			<!-- Included Modules -->
@@ -152,11 +143,13 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">Enactor::CouldNotCreateError</h1>
+		<h1 class="class">Scufl::ProcessorsLinkedTo</h1>
 
 		<div id="description">
 			<p>
-Could not create resource.
+This object is returned after invoking
+model.get_processors_linked_to(processor). The object contains two lists of
+processors.
 </p>
 
 		</div>
@@ -166,47 +159,55 @@ Could not create resource.
 
 		<!-- Attributes -->
 		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
 
-		<!-- Methods -->
-		
-		<div id="public-class-method-details" class="method-section section">
-			<h3 class="section-header">Public Class Methods</h3>
-
-		
-			<div id="new-method" class="method-detail ">
-				<a name="M000020"></a>
-
-				<div class="method-heading">
+			
+			<div id="sources-attribute-method" class="method-detail">
+				<a name="sources"></a>
 				
-					<span class="method-name">new</span><span
-						class="method-args">(url)</span>
-					<span class="method-click-advice">click to toggle source</span>
+				<a name="sources="></a>
 				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">sources</span><span
+						class="attribute-access-type">[RW]</span>
 				</div>
 
 				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="new-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/enactor/client.rb, line 27</span>
-27:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">url</span>)
-28:           <span class="ruby-keyword kw">super</span>(<span class="ruby-value str">&quot;Expected 201 Created when uploading #url&quot;</span>)
-29:       <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
+				
+				<p>
+The processors whose output is fed as input into the processor used in
+model.get_processors_linked_to(processor).
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="sinks-attribute-method" class="method-detail">
+				<a name="sinks"></a>
+				
+				<a name="sinks="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">sinks</span><span
+						class="attribute-access-type">[RW]</span>
 				</div>
 
+				<div class="method-description">
 				
+				<p>
+A list of processors that are fed the output from the processor (used in
+model.get_processors_linked_to(processor) ) as input.
+</p>
+				
+				</div>
 			</div>
-
-		
+			
 		</div>
-	
+		
+
+		<!-- Methods -->
+		
 
 	</div>
 

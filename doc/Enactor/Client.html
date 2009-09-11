@@ -61,11 +61,11 @@
 					
 					<li><a href="#M000025">::new</a></li>
 					
-					<li><a href="#M000047">#create_data_doc</a></li>
+					<li><a href="#M000046">#create_data_doc</a></li>
 					
-					<li><a href="#M000048">#create_job_doc</a></li>
+					<li><a href="#M000049">#create_job_doc</a></li>
 					
-					<li><a href="#M000067">#execute_sync</a></li>
+					<li><a href="#M000071">#execute_sync</a></li>
 					
 					<li><a href="#M000057">#finished?</a></li>
 					
@@ -99,25 +99,25 @@
 					
 					<li><a href="#M000041">#parse_data_doc</a></li>
 					
-					<li><a href="#M000062">#service_valid?</a></li>
+					<li><a href="#M000067">#service_valid?</a></li>
 					
-					<li><a href="#M000058">#submit_job</a></li>
+					<li><a href="#M000060">#submit_job</a></li>
 					
 					<li><a href="#M000050">#submit_job_doc</a></li>
 					
-					<li><a href="#M000059">#upload_data</a></li>
+					<li><a href="#M000061">#upload_data</a></li>
 					
 					<li><a href="#M000042">#upload_data_doc</a></li>
 					
 					<li><a href="#M000045">#upload_to_collection</a></li>
 					
-					<li><a href="#M000063">#upload_workflow</a></li>
+					<li><a href="#M000068">#upload_workflow</a></li>
 					
 					<li><a href="#M000043">#url_valid?</a></li>
 					
-					<li><a href="#M000066">#wait_for_job</a></li>
+					<li><a href="#M000070">#wait_for_job</a></li>
 					
-					<li><a href="#M000060">#workflow_exists?</a></li>
+					<li><a href="#M000062">#workflow_exists?</a></li>
 					
 				</ul>
 			</div>
@@ -170,6 +170,8 @@
 					<li><a href="../Scufl/Parser.html">Scufl::Parser</a></li>
 				
 					<li><a href="../Scufl/Processor.html">Scufl::Processor</a></li>
+				
+					<li><a href="../Scufl/ProcessorsLinkedTo.html">Scufl::ProcessorsLinkedTo</a></li>
 				
 					<li><a href="../Scufl/Sink.html">Scufl::Sink</a></li>
 				
@@ -380,7 +382,7 @@ sent
 
 		
 			<div id="create-data-doc-method" class="method-detail ">
-				<a name="M000047"></a>
+				<a name="M000046"></a>
 
 				<div class="method-heading">
 				
@@ -425,7 +427,7 @@ hash &#8212; A hash where the keys are strings, matching the names of input
 
 		
 			<div id="create-job-doc-method" class="method-detail ">
-				<a name="M000048"></a>
+				<a name="M000049"></a>
 
 				<div class="method-heading">
 				
@@ -439,7 +441,7 @@ hash &#8212; A hash where the keys are strings, matching the names of input
 					
 					<p>
 Create a job document for submission with <a
-href="Client.html#M000058">submit_job</a>().
+href="Client.html#M000060">submit_job</a>().
 </p>
 <p>
 Return the job document as XML.
@@ -480,7 +482,7 @@ inputs_url &#8212; The (optional) URL of a input document previously
 
 		
 			<div id="execute-sync-method" class="method-detail ">
-				<a name="M000067"></a>
+				<a name="M000071"></a>
 
 				<div class="method-heading">
 				
@@ -985,7 +987,7 @@ href="../Document/Report.html">Document::Report</a> object.
 </p>
 <p>
 job_url &#8212; The URL to a job resource previously created using <a
-href="Client.html#M000058">submit_job</a>().
+href="Client.html#M000060">submit_job</a>().
 </p>
 					
 
@@ -1354,7 +1356,7 @@ created
 
 		
 			<div id="service-valid--method" class="method-detail ">
-				<a name="M000062"></a>
+				<a name="M000067"></a>
 
 				<div class="method-heading">
 				
@@ -1393,7 +1395,7 @@ Checks if the username and password is valid for the service
 
 		
 			<div id="submit-job-method" class="method-detail ">
-				<a name="M000058"></a>
+				<a name="M000060"></a>
 
 				<div class="method-heading">
 				
@@ -1470,7 +1472,7 @@ Return the URL to the job resource.
 </p>
 <p>
 job_document &#8212; A job document created with <a
-href="Client.html#M000048">create_job_doc</a>() specifying
+href="Client.html#M000049">create_job_doc</a>() specifying
 </p>
 <pre>
  the workflow to run with which inputs.
@@ -1502,7 +1504,7 @@ Raises:
 
 		
 			<div id="upload-data-method" class="method-detail ">
-				<a name="M000059"></a>
+				<a name="M000061"></a>
 
 				<div class="method-heading">
 				
@@ -1515,7 +1517,7 @@ Raises:
 				<div class="method-description">
 					
 					<p>
-Upload data to be used with <a href="Client.html#M000058">submit_job</a>().
+Upload data to be used with <a href="Client.html#M000060">submit_job</a>().
 </p>
 <p>
 Return the URL to the created data resource.
@@ -1683,7 +1685,7 @@ value
 
 		
 			<div id="upload-workflow-method" class="method-detail ">
-				<a name="M000063"></a>
+				<a name="M000068"></a>
 
 				<div class="method-heading">
 				
@@ -1770,7 +1772,7 @@ Tests if the url is valid for this server
 
 		
 			<div id="wait-for-job-method" class="method-detail ">
-				<a name="M000066"></a>
+				<a name="M000070"></a>
 
 				<div class="method-heading">
 				
@@ -1833,7 +1835,7 @@ refresh &#8212; In seconds (as a float), how often to check the job&#8217;s
 
 		
 			<div id="workflow-exists--method" class="method-detail ">
-				<a name="M000060"></a>
+				<a name="M000062"></a>
 
 				<div class="method-heading">
 				
