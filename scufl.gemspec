@@ -3,7 +3,7 @@
 spec = Gem::Specification.new do |s| 
   s.name = "taverna-scufl"
   s.version = "0.7.0"
-#  s.date = "2009-09-11"
+  s.date = "2009-09-14"
   s.summary = "Support for interacting with the Taverna workflow system (Scufl)."
   s.description = "This a gem developed by myGrid for the purpose of interacting with Taverna 1 workflows.  An example use would be the image genaration for the model representing Taverna 1 workflows as used in myExperiment."
 
