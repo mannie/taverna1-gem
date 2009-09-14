@@ -59,65 +59,65 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000028">::new</a></li>
+					<li><a href="#M000026">::new</a></li>
 					
 					<li><a href="#M000048">#create_data_doc</a></li>
 					
 					<li><a href="#M000049">#create_job_doc</a></li>
 					
-					<li><a href="#M000077">#execute_sync</a></li>
+					<li><a href="#M000072">#execute_sync</a></li>
 					
-					<li><a href="#M000065">#finished?</a></li>
+					<li><a href="#M000058">#finished?</a></li>
 					
-					<li><a href="#M000029">#get_capabilities_doc</a></li>
+					<li><a href="#M000027">#get_capabilities_doc</a></li>
 					
 					<li><a href="#M000052">#get_job_created_date</a></li>
 					
 					<li><a href="#M000053">#get_job_modified_date</a></li>
 					
-					<li><a href="#M000063">#get_job_outputs</a></li>
+					<li><a href="#M000055">#get_job_outputs</a></li>
 					
-					<li><a href="#M000038">#get_job_outputs_doc</a></li>
+					<li><a href="#M000036">#get_job_outputs_doc</a></li>
 					
-					<li><a href="#M000064">#get_job_outputs_size</a></li>
+					<li><a href="#M000056">#get_job_outputs_size</a></li>
 					
-					<li><a href="#M000037">#get_job_outputs_url</a></li>
+					<li><a href="#M000035">#get_job_outputs_url</a></li>
 					
-					<li><a href="#M000058">#get_job_report</a></li>
+					<li><a href="#M000054">#get_job_report</a></li>
 					
 					<li><a href="#M000051">#get_job_status</a></li>
 					
-					<li><a href="#M000036">#get_user_collection_url</a></li>
+					<li><a href="#M000032">#get_user_collection_url</a></li>
 					
-					<li><a href="#M000034">#get_user_doc</a></li>
+					<li><a href="#M000031">#get_user_doc</a></li>
 					
-					<li><a href="#M000031">#get_user_url</a></li>
+					<li><a href="#M000029">#get_user_url</a></li>
 					
-					<li><a href="#M000040">#get_xml_doc</a></li>
+					<li><a href="#M000037">#get_xml_doc</a></li>
 					
-					<li><a href="#M000042">#get_xml_doc_size</a></li>
+					<li><a href="#M000040">#get_xml_doc_size</a></li>
 					
-					<li><a href="#M000044">#parse_data_doc</a></li>
+					<li><a href="#M000042">#parse_data_doc</a></li>
 					
-					<li><a href="#M000071">#service_valid?</a></li>
+					<li><a href="#M000069">#service_valid?</a></li>
 					
-					<li><a href="#M000067">#submit_job</a></li>
+					<li><a href="#M000062">#submit_job</a></li>
 					
 					<li><a href="#M000050">#submit_job_doc</a></li>
 					
-					<li><a href="#M000068">#upload_data</a></li>
+					<li><a href="#M000063">#upload_data</a></li>
 					
-					<li><a href="#M000045">#upload_data_doc</a></li>
+					<li><a href="#M000043">#upload_data_doc</a></li>
 					
 					<li><a href="#M000047">#upload_to_collection</a></li>
 					
-					<li><a href="#M000072">#upload_workflow</a></li>
+					<li><a href="#M000070">#upload_workflow</a></li>
 					
-					<li><a href="#M000046">#url_valid?</a></li>
+					<li><a href="#M000044">#url_valid?</a></li>
 					
-					<li><a href="#M000074">#wait_for_job</a></li>
+					<li><a href="#M000071">#wait_for_job</a></li>
 					
-					<li><a href="#M000070">#workflow_exists?</a></li>
+					<li><a href="#M000068">#workflow_exists?</a></li>
 					
 				</ul>
 			</div>
@@ -312,7 +312,7 @@ Mime types used by the rest protocol.
 
 		
 			<div id="new-method" class="method-detail ">
-				<a name="M000028"></a>
+				<a name="M000026"></a>
 
 				<div class="method-heading">
 				
@@ -331,7 +331,7 @@ at the given base URL.
 <p>
 Note that this constructor will not attempt to verify the URL or the
 credentials. To verify, call <a
-href="Client.html#M000031">get_user_url</a>() which requires
+href="Client.html#M000029">get_user_url</a>() which requires
 authentication.
 </p>
 <p>
@@ -396,11 +396,11 @@ sent
 					
 					<p>
 Create a data document to be uploaded with <a
-href="Client.html#M000045">upload_data_doc</a>().
+href="Client.html#M000043">upload_data_doc</a>().
 </p>
 <p>
 Return the data document a REXML::Document. This data document can be
-parsed using <a href="Client.html#M000044">parse_data_doc</a>()
+parsed using <a href="Client.html#M000042">parse_data_doc</a>()
 </p>
 <p>
 hash &#8212; A hash where the keys are strings, matching the names of input
@@ -441,7 +441,7 @@ hash &#8212; A hash where the keys are strings, matching the names of input
 					
 					<p>
 Create a job document for submission with <a
-href="Client.html#M000067">submit_job</a>().
+href="Client.html#M000062">submit_job</a>().
 </p>
 <p>
 Return the job document as XML.
@@ -482,7 +482,7 @@ inputs_url &#8212; The (optional) URL of a input document previously
 
 		
 			<div id="execute-sync-method" class="method-detail ">
-				<a name="M000077"></a>
+				<a name="M000072"></a>
 
 				<div class="method-heading">
 				
@@ -581,7 +581,7 @@ Raises:
 
 		
 			<div id="finished--method" class="method-detail ">
-				<a name="M000065"></a>
+				<a name="M000058"></a>
 
 				<div class="method-heading">
 				
@@ -605,7 +605,7 @@ actually complete, check::
 </pre>
 <p>
 Return True if the job is in a finished state, that is that the <a
-href="Status.html#M000024">Status.finished?</a>(<a
+href="Status.html#M000021">Status.finished?</a>(<a
 href="Client.html#M000051">get_job_status</a>()) is True.
 </p>
 <p>
@@ -634,7 +634,7 @@ job_url &#8212; The URL to a job resource previously created using
 
 		
 			<div id="get-capabilities-doc-method" class="method-detail ">
-				<a name="M000029"></a>
+				<a name="M000027"></a>
 
 				<div class="method-heading">
 				
@@ -771,7 +771,7 @@ job_url &#8212; The URL to a job resource previously created using
 
 		
 			<div id="get-job-outputs-method" class="method-detail ">
-				<a name="M000063"></a>
+				<a name="M000055"></a>
 
 				<div class="method-heading">
 				
@@ -819,7 +819,7 @@ job_url &#8212; The URL to a job resource previously created using
 
 		
 			<div id="get-job-outputs-doc-method" class="method-detail ">
-				<a name="M000038"></a>
+				<a name="M000036"></a>
 
 				<div class="method-heading">
 				
@@ -837,7 +837,7 @@ Get the output document for a job.
 <p>
 Return the output document as an REXML::Document object, or None if the job
 didn&#8217;t have an output document (yet). This document can be parsed
-using <a href="Client.html#M000044">parse_data_doc</a>().
+using <a href="Client.html#M000042">parse_data_doc</a>().
 </p>
 <p>
 job_url &#8212; The URL to a job resource previously created using
@@ -866,7 +866,7 @@ job_url &#8212; The URL to a job resource previously created using
 
 		
 			<div id="get-job-outputs-size-method" class="method-detail ">
-				<a name="M000064"></a>
+				<a name="M000056"></a>
 
 				<div class="method-heading">
 				
@@ -912,7 +912,7 @@ job_url &#8212; The URL to a job resource previously created using
 
 		
 			<div id="get-job-outputs-url-method" class="method-detail ">
-				<a name="M000037"></a>
+				<a name="M000035"></a>
 
 				<div class="method-heading">
 				
@@ -965,7 +965,7 @@ job_url &#8212; The URL to a job resource previously created using
 
 		
 			<div id="get-job-report-method" class="method-detail ">
-				<a name="M000058"></a>
+				<a name="M000054"></a>
 
 				<div class="method-heading">
 				
@@ -987,7 +987,7 @@ href="../Document/Report.html">Document::Report</a> object.
 </p>
 <p>
 job_url &#8212; The URL to a job resource previously created using <a
-href="Client.html#M000067">submit_job</a>().
+href="Client.html#M000062">submit_job</a>().
 </p>
 					
 
@@ -1063,7 +1063,7 @@ job_url &#8212; The URL to a job resource previously created using
 
 		
 			<div id="get-user-collection-url-method" class="method-detail ">
-				<a name="M000036"></a>
+				<a name="M000032"></a>
 
 				<div class="method-heading">
 				
@@ -1105,7 +1105,7 @@ collectionType &#8212; The collection, either &#8220;workflows&#8221; or
 
 		
 			<div id="get-user-doc-method" class="method-detail ">
-				<a name="M000034"></a>
+				<a name="M000031"></a>
 
 				<div class="method-heading">
 				
@@ -1151,7 +1151,7 @@ where to upload workflows and jobs.
 
 		
 			<div id="get-user-url-method" class="method-detail ">
-				<a name="M000031"></a>
+				<a name="M000029"></a>
 
 				<div class="method-heading">
 				
@@ -1198,7 +1198,7 @@ Get the URL for the current user&#8217;s home on the server.
 
 		
 			<div id="get-xml-doc-method" class="method-detail ">
-				<a name="M000040"></a>
+				<a name="M000037"></a>
 
 				<div class="method-heading">
 				
@@ -1253,7 +1253,7 @@ default
 
 		
 			<div id="get-xml-doc-size-method" class="method-detail ">
-				<a name="M000042"></a>
+				<a name="M000040"></a>
 
 				<div class="method-heading">
 				
@@ -1308,7 +1308,7 @@ default
 
 		
 			<div id="parse-data-doc-method" class="method-detail ">
-				<a name="M000044"></a>
+				<a name="M000042"></a>
 
 				<div class="method-heading">
 				
@@ -1322,7 +1322,7 @@ default
 					
 					<p>
 Parse a data document as returned from <a
-href="Client.html#M000038">get_job_outputs_doc</a>().
+href="Client.html#M000036">get_job_outputs_doc</a>().
 </p>
 <p>
 Return a hash where the keys are strings, matching the names of
@@ -1356,7 +1356,7 @@ created
 
 		
 			<div id="service-valid--method" class="method-detail ">
-				<a name="M000071"></a>
+				<a name="M000069"></a>
 
 				<div class="method-heading">
 				
@@ -1395,7 +1395,7 @@ Checks if the username and password is valid for the service
 
 		
 			<div id="submit-job-method" class="method-detail ">
-				<a name="M000067"></a>
+				<a name="M000062"></a>
 
 				<div class="method-heading">
 				
@@ -1504,7 +1504,7 @@ Raises:
 
 		
 			<div id="upload-data-method" class="method-detail ">
-				<a name="M000068"></a>
+				<a name="M000063"></a>
 
 				<div class="method-heading">
 				
@@ -1517,7 +1517,7 @@ Raises:
 				<div class="method-description">
 					
 					<p>
-Upload data to be used with <a href="Client.html#M000067">submit_job</a>().
+Upload data to be used with <a href="Client.html#M000062">submit_job</a>().
 </p>
 <p>
 Return the URL to the created data resource.
@@ -1556,7 +1556,7 @@ Raises:
 
 		
 			<div id="upload-data-doc-method" class="method-detail ">
-				<a name="M000045"></a>
+				<a name="M000043"></a>
 
 				<div class="method-heading">
 				
@@ -1685,7 +1685,7 @@ value
 
 		
 			<div id="upload-workflow-method" class="method-detail ">
-				<a name="M000072"></a>
+				<a name="M000070"></a>
 
 				<div class="method-heading">
 				
@@ -1733,7 +1733,7 @@ Raises:
 
 		
 			<div id="url-valid--method" class="method-detail ">
-				<a name="M000046"></a>
+				<a name="M000044"></a>
 
 				<div class="method-heading">
 				
@@ -1772,7 +1772,7 @@ Tests if the url is valid for this server
 
 		
 			<div id="wait-for-job-method" class="method-detail ">
-				<a name="M000074"></a>
+				<a name="M000071"></a>
 
 				<div class="method-heading">
 				
@@ -1835,7 +1835,7 @@ refresh &#8212; In seconds (as a float), how often to check the job&#8217;s
 
 		
 			<div id="workflow-exists--method" class="method-detail ">
-				<a name="M000070"></a>
+				<a name="M000068"></a>
 
 				<div class="method-heading">
 				
