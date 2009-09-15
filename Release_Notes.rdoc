@@ -1,11 +1,8 @@
-= Version 0.7.0
-Released:: Monday, September 14, 2009
+= Version 0.7.1
+Released:: Wednesday, September 16, 2009
 
 == Added Functionality
-- Retrieval of processors directly connected/linked to the given processor.
-- Retrieval of web services.
+- Retrieval of Taverna local workers.
 
-=== New instance methods in Scufl::Model
-      get_processor_links(processor)
-      web_services
-=== New supporting object Scufl::ProcessorLinks
+=== New instance method in T2Flow::Model
+      local_workers

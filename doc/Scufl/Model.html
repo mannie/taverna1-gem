@@ -59,21 +59,23 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000056">::new</a></li>
+					<li><a href="#M000060">::new</a></li>
 					
-					<li><a href="#M000067">#all_links</a></li>
+					<li><a href="#M000068">#all_links</a></li>
 					
-					<li><a href="#M000066">#all_processors</a></li>
+					<li><a href="#M000067">#all_processors</a></li>
 					
-					<li><a href="#M000068">#all_sinks</a></li>
+					<li><a href="#M000069">#all_sinks</a></li>
 					
-					<li><a href="#M000069">#all_sources</a></li>
+					<li><a href="#M000071">#all_sources</a></li>
 					
-					<li><a href="#M000060">#beanshells</a></li>
+					<li><a href="#M000061">#beanshells</a></li>
 					
-					<li><a href="#M000071">#get_processor_links</a></li>
+					<li><a href="#M000072">#get_processor_links</a></li>
 					
-					<li><a href="#M000062">#web_services</a></li>
+					<li><a href="#M000066">#local_workers</a></li>
+					
+					<li><a href="#M000065">#web_services</a></li>
 					
 				</ul>
 			</div>
@@ -322,7 +324,7 @@ not include those from nested workflows.
 
 		
 			<div id="new-method" class="method-detail ">
-				<a name="M000056"></a>
+				<a name="M000060"></a>
 
 				<div class="method-heading">
 				
@@ -367,7 +369,7 @@ Creates an empty model for a Taverna 1 workflow.
 
 		
 			<div id="all-links-method" class="method-detail ">
-				<a name="M000067"></a>
+				<a name="M000068"></a>
 
 				<div class="method-heading">
 				
@@ -388,10 +390,10 @@ Retrieve ALL the links WITHIN the given workflow model.
 					<div class="method-source-code"
 						id="all-links-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 61</span>
-61:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_links</span>
-62:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_links</span>(<span class="ruby-keyword kw">self</span>, [])
-63:     <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 66</span>
+66:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_links</span>
+67:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_links</span>(<span class="ruby-keyword kw">self</span>, [])
+68:     <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -401,7 +403,7 @@ Retrieve ALL the links WITHIN the given workflow model.
 
 		
 			<div id="all-processors-method" class="method-detail ">
-				<a name="M000066"></a>
+				<a name="M000067"></a>
 
 				<div class="method-heading">
 				
@@ -422,10 +424,10 @@ Retrieve ALL processor objects WITHIN the given workflow model.
 					<div class="method-source-code"
 						id="all-processors-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 55</span>
-55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_processors</span>
-56:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_processors</span>(<span class="ruby-keyword kw">self</span>, [])
-57:     <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_processors</span>
+61:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_processors</span>(<span class="ruby-keyword kw">self</span>, [])
+62:     <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -435,7 +437,7 @@ Retrieve ALL processor objects WITHIN the given workflow model.
 
 		
 			<div id="all-sinks-method" class="method-detail ">
-				<a name="M000068"></a>
+				<a name="M000069"></a>
 
 				<div class="method-heading">
 				
@@ -456,10 +458,10 @@ Retrieve ALL the sinks(outputs) WITHIN the given workflow model.
 					<div class="method-source-code"
 						id="all-sinks-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 66</span>
-66:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_sinks</span>
-67:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_sinks</span>(<span class="ruby-keyword kw">self</span>, [])
-68:     <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 71</span>
+71:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_sinks</span>
+72:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_sinks</span>(<span class="ruby-keyword kw">self</span>, [])
+73:     <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -469,7 +471,7 @@ Retrieve ALL the sinks(outputs) WITHIN the given workflow model.
 
 		
 			<div id="all-sources-method" class="method-detail ">
-				<a name="M000069"></a>
+				<a name="M000071"></a>
 
 				<div class="method-heading">
 				
@@ -490,10 +492,10 @@ Retrieve ALL the sources(inputs) WITHIN the given workflow model.
 					<div class="method-source-code"
 						id="all-sources-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 71</span>
-71:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_sources</span>
-72:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_sources</span>(<span class="ruby-keyword kw">self</span>, [])
-73:     <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 76</span>
+76:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_sources</span>
+77:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_sources</span>(<span class="ruby-keyword kw">self</span>, [])
+78:     <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -503,7 +505,7 @@ Retrieve ALL the sources(inputs) WITHIN the given workflow model.
 
 		
 			<div id="beanshells-method" class="method-detail ">
-				<a name="M000060"></a>
+				<a name="M000061"></a>
 
 				<div class="method-heading">
 				
@@ -537,7 +539,7 @@ Retrieve ALL the beanshell processors WITHIN the given workflow model.
 
 		
 			<div id="get-processor-links-method" class="method-detail ">
-				<a name="M000071"></a>
+				<a name="M000072"></a>
 
 				<div class="method-heading">
 				
@@ -566,47 +568,81 @@ direct links to or from the given processor.
 					<div class="method-source-code"
 						id="get-processor-links-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 82</span>
- 82:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_processor_links</span>(<span class="ruby-identifier">processor</span>)
- 83:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">processor</span>
- 84:       <span class="ruby-identifier">proc_links</span> = <span class="ruby-constant">ProcessorLinks</span>.<span class="ruby-identifier">new</span>
- 85:       
- 86:       <span class="ruby-comment cmt"># SOURCES</span>
- 87:       <span class="ruby-identifier">sources</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">all_links</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">sink</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{processor.name}:.+/</span> }
- 88:       <span class="ruby-identifier">proc_links</span>.<span class="ruby-identifier">sources</span> = []
- 89: 
- 90:       <span class="ruby-comment cmt"># SINKS</span>
- 91:       <span class="ruby-identifier">sinks</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">all_links</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">source</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{processor.name}:.+/</span> }
- 92:       <span class="ruby-identifier">proc_links</span>.<span class="ruby-identifier">sinks</span> = []
- 93:       <span class="ruby-identifier">temp_sinks</span> = []
- 94:       <span class="ruby-identifier">sinks</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">temp_sinks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">sink</span> }
- 95:       
- 96:       <span class="ruby-comment cmt"># Match links by port into format</span>
- 97:       <span class="ruby-comment cmt"># my_port:name_of_link_im_linked_to:its_port</span>
- 98:       <span class="ruby-identifier">sources</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">connection</span><span class="ruby-operator">|</span>
- 99:         <span class="ruby-identifier">link</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">sink</span>
-100:         <span class="ruby-identifier">connected_proc_name</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>)[<span class="ruby-value">0</span>]
-101:         <span class="ruby-identifier">my_connection_port</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>)[<span class="ruby-value">1</span>]
-102:         
-103:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">my_connection_port</span>
-104:           <span class="ruby-identifier">source</span> = <span class="ruby-identifier">my_connection_port</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;:&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">source</span>
-105:           <span class="ruby-identifier">proc_links</span>.<span class="ruby-identifier">sources</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">source</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>).<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>
-106:         <span class="ruby-keyword kw">end</span>
-107:       <span class="ruby-keyword kw">end</span>
-108:       
-109:       <span class="ruby-identifier">sinks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">connection</span><span class="ruby-operator">|</span>
-110:         <span class="ruby-identifier">link</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">source</span>
-111:         <span class="ruby-identifier">connected_proc_name</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>)[<span class="ruby-value">0</span>]
-112:         <span class="ruby-identifier">my_connection_port</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>)[<span class="ruby-value">1</span>]
-113:         
-114:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">my_connection_port</span>
-115:           <span class="ruby-identifier">sink</span> = <span class="ruby-identifier">my_connection_port</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;:&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">sink</span>
-116:           <span class="ruby-identifier">proc_links</span>.<span class="ruby-identifier">sinks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sink</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">sink</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>).<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>
-117:         <span class="ruby-keyword kw">end</span>
-118:       <span class="ruby-keyword kw">end</span>
-119:       
-120:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">proc_links</span>
-121:     <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 87</span>
+ 87:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_processor_links</span>(<span class="ruby-identifier">processor</span>)
+ 88:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">processor</span>
+ 89:       <span class="ruby-identifier">proc_links</span> = <span class="ruby-constant">ProcessorLinks</span>.<span class="ruby-identifier">new</span>
+ 90:       
+ 91:       <span class="ruby-comment cmt"># SOURCES</span>
+ 92:       <span class="ruby-identifier">sources</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">all_links</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">sink</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{processor.name}:.+/</span> }
+ 93:       <span class="ruby-identifier">proc_links</span>.<span class="ruby-identifier">sources</span> = []
+ 94: 
+ 95:       <span class="ruby-comment cmt"># SINKS</span>
+ 96:       <span class="ruby-identifier">sinks</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">all_links</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">source</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/#{processor.name}:.+/</span> }
+ 97:       <span class="ruby-identifier">proc_links</span>.<span class="ruby-identifier">sinks</span> = []
+ 98:       <span class="ruby-identifier">temp_sinks</span> = []
+ 99:       <span class="ruby-identifier">sinks</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">temp_sinks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">sink</span> }
+100:       
+101:       <span class="ruby-comment cmt"># Match links by port into format</span>
+102:       <span class="ruby-comment cmt"># my_port:name_of_link_im_linked_to:its_port</span>
+103:       <span class="ruby-identifier">sources</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">connection</span><span class="ruby-operator">|</span>
+104:         <span class="ruby-identifier">link</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">sink</span>
+105:         <span class="ruby-identifier">connected_proc_name</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>)[<span class="ruby-value">0</span>]
+106:         <span class="ruby-identifier">my_connection_port</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>)[<span class="ruby-value">1</span>]
+107:         
+108:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">my_connection_port</span>
+109:           <span class="ruby-identifier">source</span> = <span class="ruby-identifier">my_connection_port</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;:&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">source</span>
+110:           <span class="ruby-identifier">proc_links</span>.<span class="ruby-identifier">sources</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">source</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>).<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>
+111:         <span class="ruby-keyword kw">end</span>
+112:       <span class="ruby-keyword kw">end</span>
+113:       
+114:       <span class="ruby-identifier">sinks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">connection</span><span class="ruby-operator">|</span>
+115:         <span class="ruby-identifier">link</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">source</span>
+116:         <span class="ruby-identifier">connected_proc_name</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>)[<span class="ruby-value">0</span>]
+117:         <span class="ruby-identifier">my_connection_port</span> = <span class="ruby-identifier">link</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>)[<span class="ruby-value">1</span>]
+118:         
+119:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">my_connection_port</span>
+120:           <span class="ruby-identifier">sink</span> = <span class="ruby-identifier">my_connection_port</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;:&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">sink</span>
+121:           <span class="ruby-identifier">proc_links</span>.<span class="ruby-identifier">sinks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sink</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">sink</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;:&quot;</span>).<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>
+122:         <span class="ruby-keyword kw">end</span>
+123:       <span class="ruby-keyword kw">end</span>
+124:       
+125:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">proc_links</span>
+126:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="local-workers-method" class="method-detail ">
+				<a name="M000066"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">local_workers</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieve ALL local workers WITHIN the workflow
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="local-workers-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/scufl/model.rb, line 55</span>
+55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">local_workers</span>
+56:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">all_processors</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/local/i</span> }
+57:     <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -616,7 +652,7 @@ direct links to or from the given processor.
 
 		
 			<div id="web-services-method" class="method-detail ">
-				<a name="M000062"></a>
+				<a name="M000065"></a>
 
 				<div class="method-heading">
 				

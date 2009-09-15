@@ -51,6 +51,11 @@ module Scufl # :nodoc:
       self.all_processors.select { |x| x.type =~ /wsdl|soaplab|biomoby/i }
     end
     
+    # Retrieve ALL local workers WITHIN the workflow
+    def local_workers
+      self.all_processors.select { |x| x.type =~ /local/i }
+    end
+    
     # Retrieve ALL processor objects WITHIN the given workflow model.
     def all_processors
       return get_processors(self, [])
