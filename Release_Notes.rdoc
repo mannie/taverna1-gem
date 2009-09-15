@@ -3,6 +3,9 @@ Released:: Monday, September 14, 2009
 
 == Added Functionality
 - Retrieval of processors directly connected/linked to the given processor.
-=== New instance method in Scufl::Model
+- Retrieval of web services.
+
+=== New instance methods in Scufl::Model
       get_processor_links(processor)
+      web_services
 === New supporting object Scufl::ProcessorLinks
