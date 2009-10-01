@@ -11,8 +11,8 @@ spec = Gem::Specification.new do |s|
   s.email = "david.withers@manchester.ac.uk"
   s.homepage = "http://www.mygrid.org.uk/"
   
-  s.files = ["test/fixtures", "test/fixtures/animal.xml", "test/fixtures/colouranimal.xml", "test/tc_client.rb", "test/ts_taverna.rb", "lib/baclava", "lib/baclava/reader.rb", "lib/baclava/writer.rb", "lib/document", "lib/document/data.rb", "lib/document/report.rb", "lib/enactor", "lib/enactor/client.rb", "lib/scufl", "lib/scufl/dot.rb", "lib/scufl/model.rb", "lib/scufl/parser.rb", "README.rdoc", "LICENCE", "Release_Notes.rdoc"]
-  s.extra_rdoc_files = ["README.rdoc", "LICENCE", "Release_Notes.rdoc"]
+  s.files = ["test/fixtures", "test/fixtures/animal.xml", "test/fixtures/colouranimal.xml", "test/tc_client.rb", "test/ts_taverna.rb", "lib/baclava", "lib/baclava/reader.rb", "lib/baclava/writer.rb", "lib/document", "lib/document/data.rb", "lib/document/report.rb", "lib/enactor", "lib/enactor/client.rb", "lib/scufl", "lib/scufl/dot.rb", "lib/scufl/model.rb", "lib/scufl/parser.rb", "README.rdoc", "LICENCE", "ChangeLog.rdoc"]
+  s.extra_rdoc_files = ["README.rdoc", "LICENCE", "ChangeLog.rdoc"]
   s.test_files = ["test/ts_taverna.rb"]
   s.has_rdoc = true
   
