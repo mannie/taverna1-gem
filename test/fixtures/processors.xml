@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:scufl xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha" version="0.2" log="0">
+  <s:workflowdescription lsid="urn:lsid:net.sf.taverna:wfDefinition:45519fbb-fd52-4d91-a44b-3905c1fe07de" author="" title="processors" />
+  <s:processor name="RShell">
+    <s:rshell s:hostname="localhost" s:port="6311" s:username="username" s:password="password" s:keepSessionAlive="false">
+      // something here
+      <s:rshellInputPortList>
+        <s:rshellInputPort s:syntacticType="'application/x-java-serialized-object'" s:symanticType="REXP">in</s:rshellInputPort>
+      </s:rshellInputPortList>
+      <s:rshellOutputPortList>
+        <s:rshellOutputPort s:syntacticType="'application/x-java-serialized-object'" s:symanticType="REXP">out</s:rshellOutputPort>
+      </s:rshellOutputPortList>
+    </s:rshell>
+  </s:processor>
+  <s:processor name="String_Constant" boring="true">
+    <s:stringconstant>edit me!</s:stringconstant>
+  </s:processor>
+  <s:processor name="Beanshell_scripting_host">
+    <s:beanshell>
+      <s:scriptvalue>int x = 10;
+int y = x * 3;</s:scriptvalue>
+      <s:beanshellinputlist>
+        <s:beanshellinput s:syntactictype="'text/plain'">in</s:beanshellinput>
+      </s:beanshellinputlist>
+      <s:beanshelloutputlist>
+        <s:beanshelloutput s:syntactictype="'text/plain'">out</s:beanshelloutput>
+      </s:beanshelloutputlist>
+      <s:dependencies s:classloader="iteration" />
+    </s:beanshell>
+  </s:processor>
+  <s:processor name="showalign">
+    <s:description>Display a multiple sequence alignment in pretty format</s:description>
+    <s:soaplabwsdl>http://www.ebi.ac.uk/soaplab/services/display.showalign</s:soaplabwsdl>
+  </s:processor>
+  <s:processor name="getNucSeq">
+    <s:arbitrarywsdl>
+      <s:wsdl>http://www.ebi.ac.uk/xembl/XEMBL.wsdl</s:wsdl>
+      <s:operation>getNucSeq</s:operation>
+    </s:arbitrarywsdl>
+  </s:processor>
+  <s:processor name="ObjectUnion">
+    <s:description>takes two collections of input objects and returns a collection of output objects representing the non-redundant union of those two collections.  Objects are 
+determined to be similar or dissimilar based on their namespace/id pairs, regardless of Object Class; in cases where two identical objects have different Class instantiations, the Class of 
+the object in Collection1 is preferred</s:description>
+    <s:biomobywsdl>
+      <s:mobyEndpoint>http://moby.ucalgary.ca/moby/MOBY-Central.pl</s:mobyEndpoint>
+      <s:serviceName>ObjectUnion</s:serviceName>
+      <s:authorityName>icapture.mrl.ubc.ca</s:authorityName>
+    </s:biomobywsdl>
+  </s:processor>
+  <s:processor name="hsapiens_gene_vega">
+    <s:description>Homo sapiens genes (GRCh37)</s:description>
+    <s:biomart>
+      <biomart:MartQuery xmlns:biomart="http://org.embl.ebi.escience/xscufl-biomart/0.1alpha">
+        <biomart:MartService location="http://www.biomart.org/biomart/martservice" />
+        <biomart:MartDataset displayName="Homo sapiens genes (GRCh37)" name="hsapiens_gene_vega" type="TableSet" initialBatchSize="200" maximumBatchSize="50000" visible="false" interface="default" modified="2009-09-11 10:04:37">
+          <biomart:MartURLLocation database="vega_mart_56" default="0" displayName="VEGA 36  (SANGER UK)" host="www.biomart.org" includeDatasets="" martUser="" name="vega" path="/biomart/martservice" port="80" serverVirtualSchema="default" virtualSchema="default" visible="1" redirect="0" />
+        </biomart:MartDataset>
+        <biomart:Query virtualSchemaName="default" count="0" uniqueRows="0" softwareVersion="0.7" requestId="taverna" />
+      </biomart:MartQuery>
+    </s:biomart>
+  </s:processor>
+</s:scufl>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:scufl xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha" version="0.2" log="0">
+  <s:workflowdescription lsid="urn:lsid:net.sf.taverna:wfDefinition:e69a8065-9975-40d6-95b6-358ac9e86a90" author="" title="coordinated" />
+  <s:processor name="String_Constant" boring="true">
+    <s:stringconstant>edit me!</s:stringconstant>
+  </s:processor>
+  <s:processor name="String_Constant1" boring="true">
+    <s:stringconstant>edit me!</s:stringconstant>
+  </s:processor>
+  <s:coordination name="String_Constant1_BLOCKON_String_Constant">
+    <s:condition>
+      <s:state>Completed</s:state>
+      <s:target>String_Constant</s:target>
+    </s:condition>
+    <s:action>
+      <s:target>String_Constant1</s:target>
+      <s:statechange>
+        <s:from>Scheduled</s:from>
+        <s:to>Running</s:to>
+      </s:statechange>
+    </s:action>
+  </s:coordination>
+</s:scufl>
+

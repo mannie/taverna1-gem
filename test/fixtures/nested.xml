@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:scufl xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha" version="0.2" log="0">
+  <s:workflowdescription lsid="urn:lsid:net.sf.taverna:wfDefinition:07af400a-7ca8-487a-b0ac-18c2fc7ec5d8" author="" title="nested" />
+  <s:processor name="Decode_base64_to_byte">
+    <s:local>org.embl.ebi.escience.scuflworkers.java.DecodeBase64</s:local>
+  </s:processor>
+  <s:processor name="beanshell">
+    <s:beanshell>
+      <s:scriptvalue>int x = 5 * in;</s:scriptvalue>
+      <s:beanshellinputlist>
+        <s:beanshellinput s:syntactictype="'text/plain'">in</s:beanshellinput>
+      </s:beanshellinputlist>
+      <s:beanshelloutputlist>
+        <s:beanshelloutput s:syntactictype="'text/plain'">out</s:beanshelloutput>
+      </s:beanshelloutputlist>
+      <s:dependencies s:classloader="iteration" />
+    </s:beanshell>
+  </s:processor>
+  <s:processor name="Nested_Workflow">
+    <s:workflow>
+      <s:scufl version="0.2" log="0">
+        <s:workflowdescription lsid="urn:lsid:net.sf.taverna:wfDefinition:9b3e0b8b-35db-4c76-b1bd-79aef3cf2afc" author="" title="basic" />
+        <s:processor name="Beanshell_scripting_host">
+          <s:beanshell>
+            <s:scriptvalue>int x = 5 * in;
+int y = 3 * in;</s:scriptvalue>
+            <s:beanshellinputlist>
+              <s:beanshellinput s:syntactictype="'text/plain'">in</s:beanshellinput>
+            </s:beanshellinputlist>
+            <s:beanshelloutputlist>
+              <s:beanshelloutput s:syntactictype="'text/plain'">out</s:beanshelloutput>
+            </s:beanshelloutputlist>
+            <s:dependencies s:classloader="iteration" />
+          </s:beanshell>
+        </s:processor>
+        <s:processor name="diffseq">
+          <s:description>Compare and report features of two similar sequences</s:description>
+          <s:soaplabwsdl>http://www.ebi.ac.uk/soaplab/services/alignment_differences.diffseq</s:soaplabwsdl>
+        </s:processor>
+        <s:link source="input" sink="Beanshell_scripting_host:in" />
+        <s:link source="Beanshell_scripting_host:out" sink="output" />
+        <s:source name="input" />
+        <s:sink name="output" />
+      </s:scufl>
+    </s:workflow>
+  </s:processor>
+  <s:link source="in0" sink="beanshell:in" />
+  <s:link source="beanshell:out" sink="Nested_Workflow:input" />
+  <s:link source="Nested_Workflow:output" sink="out0" />
+  <s:source name="in0" />
+  <s:sink name="out0" />
+  <s:sink name="out1" />
+</s:scufl>
+

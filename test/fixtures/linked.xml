@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:scufl xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha" version="0.2" log="0">
+  <s:workflowdescription lsid="urn:lsid:net.sf.taverna:wfDefinition:ae7d451d-41cb-4e03-aae4-241f8bce41d7" author="" title="linked" />
+  <s:processor name="diffseq">
+    <s:description>Compare and report features of two similar sequences</s:description>
+    <s:soaplabwsdl>http://www.ebi.ac.uk/soaplab/services/alignment_differences.diffseq</s:soaplabwsdl>
+  </s:processor>
+  <s:processor name="fdrawtree">
+    <s:description>Plots an unrooted tree diagram</s:description>
+    <s:soaplabwsdl>http://www.ebi.ac.uk/soaplab/services/phylogeny_tree_drawing.fdrawtree</s:soaplabwsdl>
+  </s:processor>
+  <s:processor name="run_eSummary_MS">
+    <s:arbitrarywsdl>
+      <s:wsdl>http://eutils.ncbi.nlm.nih.gov/entrez/eutils/soap/eutils.wsdl</s:wsdl>
+      <s:operation>run_eSummary_MS</s:operation>
+    </s:arbitrarywsdl>
+  </s:processor>
+  <s:processor name="search_drugs_by_name">
+    <s:arbitrarywsdl>
+      <s:wsdl>http://soap.genome.jp/KEGG.wsdl</s:wsdl>
+      <s:operation>search_drugs_by_name</s:operation>
+    </s:arbitrarywsdl>
+  </s:processor>
+  <s:processor name="BIVGetNeighbours">
+    <s:arbitrarywsdl>
+      <s:wsdl>http://soap.bind.ca/wsdl/bind.wsdl</s:wsdl>
+      <s:operation>BIVGetNeighbours</s:operation>
+    </s:arbitrarywsdl>
+  </s:processor>
+  <s:link source="BIVGetNeighbours:BIVInteraction" sink="run_eSummary_MS:parameters" />
+  <s:link source="diffseq:boutfeat" sink="fdrawtree:bscale" />
+  <s:link source="run_eSummary_MS:attachmentList" sink="diffseq:offormat_boutfeat" />
+  <s:link source="run_eSummary_MS:parameters" sink="search_drugs_by_name:name" />
+</s:scufl>
+

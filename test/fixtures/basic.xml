@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:scufl xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha" version="0.2" log="0">
+  <s:workflowdescription lsid="urn:lsid:net.sf.taverna:wfDefinition:9b3e0b8b-35db-4c76-b1bd-79aef3cf2afc" author="" title="basic" />
+  <s:processor name="Beanshell_scripting_host">
+    <s:beanshell>
+      <s:scriptvalue>int x = 5 * in;
+int y = 3 * in;</s:scriptvalue>
+      <s:beanshellinputlist>
+        <s:beanshellinput s:syntactictype="'text/plain'">in</s:beanshellinput>
+      </s:beanshellinputlist>
+      <s:beanshelloutputlist>
+        <s:beanshelloutput s:syntactictype="'text/plain'">out</s:beanshelloutput>
+      </s:beanshelloutputlist>
+      <s:dependencies s:classloader="iteration">
+        <s:jarfile>ojdbc14.jar</s:jarfile>
+      </s:dependencies>
+    </s:beanshell>
+  </s:processor>
+  <s:link source="input" sink="Beanshell_scripting_host:in" />
+  <s:link source="Beanshell_scripting_host:out" sink="output" />
+  <s:source name="input" />
+  <s:sink name="output" />
+</s:scufl>
+
