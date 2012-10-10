@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class TcClient - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>test/tc_client.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Test::Unit::TestCase
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-setup">#setup</a>
+    
+    <li><a href="#method-i-test_connect">#test_connect</a>
+    
+    <li><a href="#method-i-test_create_data">#test_create_data</a>
+    
+    <li><a href="#method-i-test_create_job">#test_create_job</a>
+    
+    <li><a href="#method-i-test_execute">#test_execute</a>
+    
+    <li><a href="#method-i-test_execute_with_data">#test_execute_with_data</a>
+    
+    <li><a href="#method-i-test_execute_with_multiple_data">#test_execute_with_multiple_data</a>
+    
+    <li><a href="#method-i-test_finished">#test_finished</a>
+    
+    <li><a href="#method-i-test_get_job_created_date">#test_get_job_created_date</a>
+    
+    <li><a href="#method-i-test_get_job_modified_date">#test_get_job_modified_date</a>
+    
+    <li><a href="#method-i-test_get_job_status">#test_get_job_status</a>
+    
+    <li><a href="#method-i-test_get_user_collection_url">#test_get_user_collection_url</a>
+    
+    <li><a href="#method-i-test_get_user_url">#test_get_user_url</a>
+    
+    <li><a href="#method-i-test_job_outputs_size">#test_job_outputs_size</a>
+    
+    <li><a href="#method-i-test_service_valid">#test_service_valid</a>
+    
+    <li><a href="#method-i-test_submit_job">#test_submit_job</a>
+    
+    <li><a href="#method-i-test_submit_job_with_data">#test_submit_job_with_data</a>
+    
+    <li><a href="#method-i-test_upload_data">#test_upload_data</a>
+    
+    <li><a href="#method-i-test_upload_workflow">#test_upload_workflow</a>
+    
+    <li><a href="#method-i-test_wait_for_job">#test_wait_for_job</a>
+    
+    <li><a href="#method-i-test_workflow_exists">#test_workflow_exists</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./ChangeLog_rdoc.html">ChangeLog</a>
+  
+    <li class="file"><a href="./LICENCE.html">LICENCE</a>
+  
+    <li class="file"><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Scufl.html">Scufl</a>
+  
+    <li><a href="./Scufl/Coordination.html">Scufl::Coordination</a>
+  
+    <li><a href="./Scufl/Dot.html">Scufl::Dot</a>
+  
+    <li><a href="./Scufl/Link.html">Scufl::Link</a>
+  
+    <li><a href="./Scufl/Model.html">Scufl::Model</a>
+  
+    <li><a href="./Scufl/Parser.html">Scufl::Parser</a>
+  
+    <li><a href="./Scufl/Processor.html">Scufl::Processor</a>
+  
+    <li><a href="./Scufl/ProcessorLinks.html">Scufl::ProcessorLinks</a>
+  
+    <li><a href="./Scufl/Sink.html">Scufl::Sink</a>
+  
+    <li><a href="./Scufl/Source.html">Scufl::Source</a>
+  
+    <li><a href="./Scufl/WorkflowDescription.html">Scufl::WorkflowDescription</a>
+  
+    <li><a href="./Enactor.html">Enactor</a>
+  
+    <li><a href="./Enactor/Client.html">Enactor::Client</a>
+  
+    <li><a href="./Enactor/CouldNotCreateError.html">Enactor::CouldNotCreateError</a>
+  
+    <li><a href="./Enactor/NotCompleteError.html">Enactor::NotCompleteError</a>
+  
+    <li><a href="./Enactor/Status.html">Enactor::Status</a>
+  
+    <li><a href="./Enactor/TavernaServiceError.html">Enactor::TavernaServiceError</a>
+  
+    <li><a href="./Document.html">Document</a>
+  
+    <li><a href="./Document/Data.html">Document::Data</a>
+  
+    <li><a href="./Document/Processor.html">Document::Processor</a>
+  
+    <li><a href="./Document/Reader.html">Document::Reader</a>
+  
+    <li><a href="./Document/Report.html">Document::Report</a>
+  
+    <li><a href="./Baclava.html">Baclava</a>
+  
+    <li><a href="./Baclava/Reader.html">Baclava::Reader</a>
+  
+    <li><a href="./Baclava/Writer.html">Baclava::Writer</a>
+  
+    <li><a href="./TcClient.html">TcClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class TcClient</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="ANIMAL_WF">ANIMAL_WF
+        
+        <dd class="description"><p>Test workflows</p>
+        
+      
+        <dt id="COLOUR_ANIMAL_WF">COLOUR_ANIMAL_WF
+        
+        <dd class="description">
+        
+      
+        <dt id="FIXTURES">FIXTURES
+        
+        <dd class="description">
+        
+      
+        <dt id="TEST_PW">TEST_PW
+        
+        <dd class="description">
+        
+      
+        <dt id="TEST_SERVER">TEST_SERVER
+        
+        <dd class="description">
+        
+      
+        <dt id="TEST_USER">TEST_USER
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+    <span class="ruby-ivar">@service</span> = <span class="ruby-constant">Enactor</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">TEST_SERVER</span>, <span class="ruby-constant">TEST_USER</span>, <span class="ruby-constant">TEST_PW</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- setup-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- setup-method -->
+
+    
+      <div id="method-i-test_connect" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_connect</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_connect-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_connect</span>
+        <span class="ruby-identifier">capabilities_doc</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_capabilities_doc</span>()
+<span class="ruby-comment">#users = capabilities.elements[&quot;{http://taverna.sf.net/service}users&quot;]</span>
+<span class="ruby-identifier">users</span> = <span class="ruby-identifier">capabilities_doc</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">&quot;users&quot;</span>]
+<span class="ruby-identifier">users_url</span> = <span class="ruby-identifier">users</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">get_attribute_ns</span>(<span class="ruby-string">'http://www.w3.org/1999/xlink'</span>, <span class="ruby-string">'href'</span>).<span class="ruby-identifier">value</span>
+<span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">TEST_SERVER</span>  <span class="ruby-operator">+</span> <span class="ruby-string">&quot;users&quot;</span>, <span class="ruby-identifier">users_url</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_connect-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_connect-method -->
+
+    
+      <div id="method-i-test_create_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_create_data</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_create_data-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 77</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_create_data</span>
+    <span class="ruby-identifier">inputs</span> = {}
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">'colour'</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">'red'</span>)
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">'animal'</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">'snake'</span>)
+    <span class="ruby-identifier">data_document</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">create_data_doc</span>(<span class="ruby-identifier">inputs</span>)
+    <span class="ruby-identifier">parsed</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">parse_data_doc</span>(<span class="ruby-identifier">data_document</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">inputs</span>, <span class="ruby-identifier">parsed</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_create_data-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_create_data-method -->
+
+    
+      <div id="method-i-test_create_job" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_create_job</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_create_job-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_create_job</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">job_doc</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">create_job_doc</span>(<span class="ruby-identifier">workflow_url</span>)
+    <span class="ruby-comment">#workflow_element = job_doc.elements[&quot;{http://taverna.sf.net/service}workflow&quot;]</span>
+    <span class="ruby-identifier">workflow_element</span> = <span class="ruby-identifier">job_doc</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-string">'workflow'</span>]
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">workflow_url</span>, <span class="ruby-identifier">workflow_element</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">get_attribute_ns</span>(<span class="ruby-string">'http://www.w3.org/1999/xlink'</span>, <span class="ruby-string">'href'</span>).<span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_create_job-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_create_job-method -->
+
+    
+      <div id="method-i-test_execute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_execute</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_execute-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_execute</span>
+    <span class="ruby-comment"># Note: This test might take a minute or so to complete</span>
+    <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">execute_sync</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>, <span class="ruby-identifier">results</span>.<span class="ruby-identifier">length</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;frog&quot;</span>, <span class="ruby-identifier">results</span>[<span class="ruby-string">&quot;animal&quot;</span>].<span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_execute-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_execute-method -->
+
+    
+      <div id="method-i-test_execute_with_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_execute_with_data</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_execute_with_data-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_execute_with_data</span>
+    <span class="ruby-comment"># Note: This test might take a minute or so to complete</span>
+    <span class="ruby-identifier">inputs</span> = {}
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">&quot;colour&quot;</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;red&quot;</span>)
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">&quot;animal&quot;</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;snake&quot;</span>)
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">COLOUR_ANIMAL_WF</span>)
+    <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">execute_sync</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">workflow_url</span>, <span class="ruby-identifier">inputs</span>)
+
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>, <span class="ruby-identifier">results</span>.<span class="ruby-identifier">length</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-string">&quot;redsnake&quot;</span>, <span class="ruby-identifier">results</span>[<span class="ruby-string">&quot;coulouredAnimal&quot;</span>].<span class="ruby-identifier">value</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_execute_with_data-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_execute_with_data-method -->
+
+    
+      <div id="method-i-test_execute_with_multiple_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_execute_with_multiple_data</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_execute_with_multiple_data-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_execute_with_multiple_data</span>
+    <span class="ruby-comment"># Note: This test might take a minute or so to complete</span>
+    <span class="ruby-identifier">inputs</span> = {}
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">&quot;colour&quot;</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>([<span class="ruby-string">&quot;red&quot;</span>, <span class="ruby-string">&quot;green&quot;</span>])
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">&quot;animal&quot;</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>([<span class="ruby-string">&quot;rabbit&quot;</span>, <span class="ruby-string">&quot;mouse&quot;</span>, <span class="ruby-string">&quot;cow&quot;</span>])
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">COLOUR_ANIMAL_WF</span>)
+    <span class="ruby-identifier">results</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">execute_sync</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">workflow_url</span>, <span class="ruby-identifier">inputs</span>)
+
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>, <span class="ruby-identifier">results</span>.<span class="ruby-identifier">length</span>)
+    <span class="ruby-identifier">animals</span> = <span class="ruby-identifier">results</span>[<span class="ruby-string">&quot;coulouredAnimal&quot;</span>].<span class="ruby-identifier">value</span>
+
+            <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">2</span>, <span class="ruby-identifier">animals</span>.<span class="ruby-identifier">length</span>)
+            <span class="ruby-identifier">animals</span> = <span class="ruby-identifier">animals</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">animals</span>[<span class="ruby-value">1</span>]
+            <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">6</span>, <span class="ruby-identifier">animals</span>.<span class="ruby-identifier">length</span>)
+
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">animals</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;redmouse&quot;</span>))
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">animals</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;greenrabbit&quot;</span>))
+    <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-identifier">animals</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;redsnake&quot;</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_execute_with_multiple_data-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_execute_with_multiple_data-method -->
+
+    
+      <div id="method-i-test_finished" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_finished</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_finished-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 125</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_finished</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">submit_job</span>(<span class="ruby-identifier">workflow_url</span>)
+    <span class="ruby-comment"># Assuming our server is not VERY quick</span>
+    <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-ivar">@service</span>.<span class="ruby-identifier">finished?</span>(<span class="ruby-identifier">job_url</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_finished-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_finished-method -->
+
+    
+      <div id="method-i-test_get_job_created_date" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_job_created_date</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_job_created_date-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_job_created_date</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">submit_job</span>(<span class="ruby-identifier">workflow_url</span>)
+            <span class="ruby-identifier">time</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_job_created_date</span>(<span class="ruby-identifier">job_url</span>)
+            <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">time</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">DateTime</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_get_job_created_date-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_get_job_created_date-method -->
+
+    
+      <div id="method-i-test_get_job_modified_date" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_job_modified_date</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_job_modified_date-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_job_modified_date</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">submit_job</span>(<span class="ruby-identifier">workflow_url</span>)
+            <span class="ruby-identifier">time</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_job_modified_date</span>(<span class="ruby-identifier">job_url</span>)
+            <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">time</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">DateTime</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_get_job_modified_date-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_get_job_modified_date-method -->
+
+    
+      <div id="method-i-test_get_job_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_job_status</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_job_status-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_job_status</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">submit_job</span>(<span class="ruby-identifier">workflow_url</span>)
+    <span class="ruby-identifier">status</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_job_status</span>(<span class="ruby-identifier">job_url</span>)
+    <span class="ruby-identifier">assert</span>(<span class="ruby-constant">Enactor</span><span class="ruby-operator">::</span><span class="ruby-constant">Status</span>.<span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">status</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_get_job_status-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_get_job_status-method -->
+
+    
+      <div id="method-i-test_get_user_collection_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_user_collection_url</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_user_collection_url-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_user_collection_url</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_user_collection_url</span>(<span class="ruby-string">&quot;workflows&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">TEST_SERVER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;users/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">TEST_USER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/workflows&quot;</span>, <span class="ruby-identifier">workflow_url</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_user_collection_url</span>(<span class="ruby-string">&quot;jobs&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">TEST_SERVER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;users/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">TEST_USER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/jobs&quot;</span>, <span class="ruby-identifier">job_url</span>)
+    <span class="ruby-identifier">data_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_user_collection_url</span>(<span class="ruby-string">&quot;datas&quot;</span>)
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">TEST_SERVER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;users/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">TEST_USER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/data&quot;</span>, <span class="ruby-identifier">data_url</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_get_user_collection_url-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_get_user_collection_url-method -->
+
+    
+      <div id="method-i-test_get_user_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_get_user_url</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_get_user_url-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_user_url</span>
+    <span class="ruby-identifier">user_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_user_url</span>()
+    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">TEST_SERVER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;users/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">TEST_USER</span>, <span class="ruby-identifier">user_url</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_get_user_url-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_get_user_url-method -->
+
+    
+      <div id="method-i-test_job_outputs_size" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_job_outputs_size</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_job_outputs_size-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_job_outputs_size</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">submit_job</span>(<span class="ruby-identifier">workflow_url</span>)
+    <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">wait_for_job</span>(<span class="ruby-identifier">job_url</span>, <span class="ruby-value">30</span>)
+            <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">481</span>, <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">get_job_outputs_size</span>(<span class="ruby-identifier">job_url</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_job_outputs_size-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_job_outputs_size-method -->
+
+    
+      <div id="method-i-test_service_valid" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_service_valid</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_service_valid-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_service_valid</span>
+        <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@service</span>.<span class="ruby-identifier">service_valid?</span>)
+        <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Enactor</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">TEST_SERVER</span>, <span class="ruby-constant">TEST_USER</span>, <span class="ruby-constant">TEST_PW</span>.<span class="ruby-identifier">chop</span>).<span class="ruby-identifier">service_valid?</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_service_valid-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_service_valid-method -->
+
+    
+      <div id="method-i-test_submit_job" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_submit_job</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_submit_job-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_submit_job</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">submit_job</span>(<span class="ruby-identifier">workflow_url</span>)
+    <span class="ruby-identifier">prefix</span> = <span class="ruby-constant">TEST_SERVER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;jobs/&quot;</span>
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">job_url</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">prefix</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_submit_job-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_submit_job-method -->
+
+    
+      <div id="method-i-test_submit_job_with_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_submit_job_with_data</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_submit_job_with_data-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_submit_job_with_data</span>
+    <span class="ruby-identifier">inputs</span> = {}
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">&quot;colour&quot;</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;red&quot;</span>)
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">&quot;animal&quot;</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;snake&quot;</span>)
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">COLOUR_ANIMAL_WF</span>)
+    <span class="ruby-identifier">data_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_data</span>(<span class="ruby-identifier">inputs</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">submit_job</span>(<span class="ruby-identifier">workflow_url</span>, <span class="ruby-identifier">data_url</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_submit_job_with_data-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_submit_job_with_data-method -->
+
+    
+      <div id="method-i-test_upload_data" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_upload_data</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_upload_data-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_upload_data</span>
+    <span class="ruby-identifier">inputs</span> = {}
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">&quot;colour&quot;</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;red&quot;</span>)
+    <span class="ruby-identifier">inputs</span>[<span class="ruby-string">&quot;animal&quot;</span>] = <span class="ruby-constant">Document</span><span class="ruby-operator">::</span><span class="ruby-constant">Data</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;snake&quot;</span>)
+    <span class="ruby-identifier">data_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_data</span>(<span class="ruby-identifier">inputs</span>)
+    <span class="ruby-identifier">prefix</span> = <span class="ruby-constant">TEST_SERVER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;data/&quot;</span>
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">data_url</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">prefix</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_upload_data-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_upload_data-method -->
+
+    
+      <div id="method-i-test_upload_workflow" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_upload_workflow</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_upload_workflow-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_upload_workflow</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">prefix</span> = <span class="ruby-constant">TEST_SERVER</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;workflows/&quot;</span>
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">workflow_url</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">prefix</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_upload_workflow-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_upload_workflow-method -->
+
+    
+      <div id="method-i-test_wait_for_job" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_wait_for_job</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_wait_for_job-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 139</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_wait_for_job</span>
+    <span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+    <span class="ruby-identifier">job_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">submit_job</span>(<span class="ruby-identifier">workflow_url</span>)
+    <span class="ruby-identifier">now</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+    <span class="ruby-identifier">timeout</span> = <span class="ruby-value">1</span>
+    <span class="ruby-identifier">status</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">wait_for_job</span>(<span class="ruby-identifier">job_url</span>, <span class="ruby-identifier">timeout</span>)
+    <span class="ruby-identifier">after</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+
+    <span class="ruby-comment"># Should be at least some milliseconds longer than the timeout</span>
+    <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">after</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">now</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timeout</span>)
+    <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-ivar">@service</span>.<span class="ruby-identifier">finished?</span>(<span class="ruby-identifier">job_url</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_wait_for_job-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_wait_for_job-method -->
+
+    
+      <div id="method-i-test_workflow_exists" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_workflow_exists</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_workflow_exists-source">
+            <pre><span class="ruby-comment"># File test/tc_client.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_workflow_exists</span>
+<span class="ruby-identifier">workflow_url</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">upload_workflow</span>(<span class="ruby-constant">ANIMAL_WF</span>)
+        <span class="ruby-identifier">assert</span>(<span class="ruby-ivar">@service</span>.<span class="ruby-identifier">workflow_exists?</span>(<span class="ruby-identifier">workflow_url</span>))
+        <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-ivar">@service</span>.<span class="ruby-identifier">workflow_exists?</span>(<span class="ruby-identifier">workflow_url</span>.<span class="ruby-identifier">chop</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- test_workflow_exists-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- test_workflow_exists-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

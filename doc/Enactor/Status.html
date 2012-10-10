@@ -1,375 +1,363 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-	<title>Class: Enactor::Status</title>
+<title>class Enactor::Status - RDoc Documentation</title>
 
-	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-	<script src="../js/jquery.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="../js/thickbox-compressed.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="../js/quicksearch.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="../js/darkfish.js" type="text/javascript"
-		charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
 
-</head>
-<body class="class">
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
 
-	<div id="metadata">
-		<div id="file-metadata">
-			<div id="file-list-section" class="section">
-				<h3 class="section-header">In Files</h3>
-				<div class="section-body">
-					<ul>
-					
-						<li><a href="../lib/enactor/client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/enactor/client.rb">lib/enactor/client.rb</a></li>
-					
-					</ul>
-				</div>
-			</div>
 
-			
-		</div>
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-		<div id="class-metadata">
 
-			<!-- Parent Class -->
-			
-			<div id="parent-class-section" class="section">
-				<h3 class="section-header">Parent</h3>
-				
-				<p class="link">Object</p>
-				
-			</div>
-			
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-			<!-- Namespace Contents -->
-			
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-			<!-- Method Quickref -->
-			
-			<div id="method-list-section" class="section">
-				<h3 class="section-header">Methods</h3>
-				<ul class="link-list">
-					
-					<li><a href="#M000021">::finished?</a></li>
-					
-					<li><a href="#M000022">::valid?</a></li>
-					
-				</ul>
-			</div>
-			
 
-			<!-- Included Modules -->
-			
-		</div>
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/enactor/client.rb
+  </ul>
+</nav>
 
-		<div id="project-metadata">
-			
-			
-			<div id="fileindex-section" class="section project-section">
-				<h3 class="section-header">Files</h3>
-				<ul>
-				
-					<li class="file"><a href="../ChangeLog_rdoc.html">ChangeLog.rdoc</a></li>
-				
-					<li class="file"><a href="../LICENCE.html">LICENCE</a></li>
-				
-					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
-				
-				</ul>
-			</div>
-			
+    
+  </div>
 
-			<div id="classindex-section" class="section project-section">
-				<h3 class="section-header">Class Index
-					<span class="search-toggle"><img src="../images/find.png"
-						height="16" width="16" alt="[+]"
-						title="show/hide quicksearch" /></span></h3>
-				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-				<fieldset>
-					<legend>Quicksearch</legend>
-					<input type="text" name="quicksearch" value=""
-						class="quicksearch-field" />
-				</fieldset>
-				</form>
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
 
-				<ul class="link-list">
-				
-					<li><a href="../Scufl/Coordination.html">Scufl::Coordination</a></li>
-				
-					<li><a href="../Scufl/Dot.html">Scufl::Dot</a></li>
-				
-					<li><a href="../Scufl/Link.html">Scufl::Link</a></li>
-				
-					<li><a href="../Scufl/Model.html">Scufl::Model</a></li>
-				
-					<li><a href="../Scufl/Parser.html">Scufl::Parser</a></li>
-				
-					<li><a href="../Scufl/Processor.html">Scufl::Processor</a></li>
-				
-					<li><a href="../Scufl/ProcessorLinks.html">Scufl::ProcessorLinks</a></li>
-				
-					<li><a href="../Scufl/Sink.html">Scufl::Sink</a></li>
-				
-					<li><a href="../Scufl/Source.html">Scufl::Source</a></li>
-				
-					<li><a href="../Scufl/WorkflowDescription.html">Scufl::WorkflowDescription</a></li>
-				
-					<li><a href="../Enactor/Client.html">Enactor::Client</a></li>
-				
-					<li><a href="../Enactor/CouldNotCreateError.html">Enactor::CouldNotCreateError</a></li>
-				
-					<li><a href="../Enactor/NotCompleteError.html">Enactor::NotCompleteError</a></li>
-				
-					<li><a href="../Enactor/Status.html">Enactor::Status</a></li>
-				
-					<li><a href="../Enactor/TavernaServiceError.html">Enactor::TavernaServiceError</a></li>
-				
-					<li><a href="../Document/Data.html">Document::Data</a></li>
-				
-					<li><a href="../Document/Processor.html">Document::Processor</a></li>
-				
-					<li><a href="../Document/Reader.html">Document::Reader</a></li>
-				
-					<li><a href="../Document/Report.html">Document::Report</a></li>
-				
-					<li><a href="../Baclava/Reader.html">Baclava::Reader</a></li>
-				
-					<li><a href="../Baclava/Writer.html">Baclava::Writer</a></li>
-				
-				</ul>
-				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
-			</div>
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
 
-			
-		</div>
-	</div>
+  <ul class="link-list">
+    
+    <li><a href="#method-c-finished-3F">::finished?</a>
+    
+    <li><a href="#method-c-valid-3F">::valid?</a>
+    
+  </ul>
+</nav>
 
-	<div id="documentation">
-		<h1 class="class">Enactor::Status</h1>
+  </div>
 
-		<div id="description">
-			<p>
-<a href="Status.html">Status</a> messages that can be returned from
-TavernaService.get_job_status().
-</p>
-<p>
-If finished?(status) is true, this means the job is finished, either
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../ChangeLog_rdoc.html">ChangeLog</a>
+  
+    <li class="file"><a href="../LICENCE.html">LICENCE</a>
+  
+    <li class="file"><a href="../README_rdoc.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Scufl.html">Scufl</a>
+  
+    <li><a href="../Scufl/Coordination.html">Scufl::Coordination</a>
+  
+    <li><a href="../Scufl/Dot.html">Scufl::Dot</a>
+  
+    <li><a href="../Scufl/Link.html">Scufl::Link</a>
+  
+    <li><a href="../Scufl/Model.html">Scufl::Model</a>
+  
+    <li><a href="../Scufl/Parser.html">Scufl::Parser</a>
+  
+    <li><a href="../Scufl/Processor.html">Scufl::Processor</a>
+  
+    <li><a href="../Scufl/ProcessorLinks.html">Scufl::ProcessorLinks</a>
+  
+    <li><a href="../Scufl/Sink.html">Scufl::Sink</a>
+  
+    <li><a href="../Scufl/Source.html">Scufl::Source</a>
+  
+    <li><a href="../Scufl/WorkflowDescription.html">Scufl::WorkflowDescription</a>
+  
+    <li><a href="../Enactor.html">Enactor</a>
+  
+    <li><a href="../Enactor/Client.html">Enactor::Client</a>
+  
+    <li><a href="../Enactor/CouldNotCreateError.html">Enactor::CouldNotCreateError</a>
+  
+    <li><a href="../Enactor/NotCompleteError.html">Enactor::NotCompleteError</a>
+  
+    <li><a href="../Enactor/Status.html">Enactor::Status</a>
+  
+    <li><a href="../Enactor/TavernaServiceError.html">Enactor::TavernaServiceError</a>
+  
+    <li><a href="../Document.html">Document</a>
+  
+    <li><a href="../Document/Data.html">Document::Data</a>
+  
+    <li><a href="../Document/Processor.html">Document::Processor</a>
+  
+    <li><a href="../Document/Reader.html">Document::Reader</a>
+  
+    <li><a href="../Document/Report.html">Document::Report</a>
+  
+    <li><a href="../Baclava.html">Baclava</a>
+  
+    <li><a href="../Baclava/Reader.html">Baclava::Reader</a>
+  
+    <li><a href="../Baclava/Writer.html">Baclava::Writer</a>
+  
+    <li><a href="../TcClient.html">TcClient</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Enactor::Status</h1>
+
+  <div id="description" class="description">
+    
+<p><a href="Status.html">Status</a> messages that can be returned from
+TavernaService.get_job_status().</p>
+
+<p>If finished?(status) is true, this means the job is finished,  either
 successfully (<a href="Status.html#COMPLETE">COMPLETE</a>), unsuccessfully
 (<a href="Status.html#CANCELLED">CANCELLED</a>, <a
-href="Status.html#FAILED">FAILED</a>), or that the job is no longer in the
-database (<a href="Status.html#DESTROYED">DESTROYED</a>).
-</p>
-<p>
-When a job has just been created it will be in status <a
-href="Status.html#NEW">NEW</a>, after that it will immediately be on a
-queue and in the state <a href="Status.html#QUEUED">QUEUED</a>. Once the
+href="Status.html#FAILED">FAILED</a>), or  that the job is no longer in the
+database (<a href="Status.html#DESTROYED">DESTROYED</a>).</p>
+
+<p>When a job has just been created it will be in status <a
+href="Status.html#NEW">NEW</a>, after that  it will immediately be on a
+queue and in the state <a href="Status.html#QUEUED">QUEUED</a>. Once the 
 job has been picked up by a worker it will be in <a
-href="Status.html#INITIALISING">INITIALISING</a>, this state might include
-the startup time of the worker and while downloading the workflow and input
-data to the worker. The state <a href="Status.html#PAUSED">PAUSED</a> is
-not currently used. The <a href="Status.html#FAILING">FAILING</a> state can
-occur if the workflow engine crashed, after clean-up or if the workflow
-itself failed, the state will be <a href="Status.html#FAILED">FAILED</a>.
-</p>
-<p>
-The job might at any time be set to the state <a
-href="Status.html#CANCELLING">CANCELLING</a> by the user, which will stop
-execution of the workflow, leading to the state <a
-href="Status.html#CANCELLED">CANCELLED</a>.
-</p>
-<p>
-If the workflow execution completed the state will be set to <a
-href="Status.html#COMPLETE">COMPLETE</a>, after which the workflow result
-data should be available by using get_job_outputs_doc().
-</p>
-<p>
-If data about the job has been lost (probably because it&#8217;s too old or
+href="Status.html#INITIALISING">INITIALISING</a>, this  state might include
+the startup time of the worker and while downloading  the workflow and
+input data to the worker. The state <a href="Status.html#PAUSED">PAUSED</a>
+is not  currently used. The <a href="Status.html#FAILING">FAILING</a> state
+can occur if the workflow engine crashed, after clean-up or if the workflow
+itself failed, the state  will be <a href="Status.html#FAILED">FAILED</a>.</p>
+
+<p>The job might at any time be set to the state <a
+href="Status.html#CANCELLING">CANCELLING</a> by the user,  which will stop
+execution of the workflow, leading to the state  <a
+href="Status.html#CANCELLED">CANCELLED</a>.</p>
+
+<p>If the workflow execution completed the state will be set to <a
+href="Status.html#COMPLETE">COMPLETE</a>,  after which the workflow result
+data should be available by using get_job_outputs_doc().</p>
+
+<p>If data about the job has been lost (probably because it’s too old  or
 has been deleted by the user), the state will be <a
-href="Status.html#DESTROYED">DESTROYED</a>.
-</p>
+href="Status.html#DESTROYED">DESTROYED</a>.</p>
 
-		</div>
+  </div><!-- description -->
 
-		<!-- Constants -->
-		
-		<div id="constants-list" class="section">
-			<h3 class="section-header">Constants</h3>
-			<dl>
-			
-				<dt><a name="NEW">NEW</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="QUEUED">QUEUED</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="INITIALISING">INITIALISING</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="PAUSED">PAUSED</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="FAILING">FAILING</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="CANCELLING">CANCELLING</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="CANCELLED">CANCELLED</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="COMPLETE">COMPLETE</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="FAILED">FAILED</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="DESTROYED">DESTROYED</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="FINISHED">FINISHED</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="ALL">ALL</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-			</dl>
-		</div>
-		
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
 
-		<!-- Attributes -->
-		
+    
 
-		<!-- Methods -->
-		
-		<div id="public-class-method-details" class="method-section section">
-			<h3 class="section-header">Public Class Methods</h3>
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="ALL">ALL
+        
+        <dd class="description">
+        
+      
+        <dt id="CANCELLED">CANCELLED
+        
+        <dd class="description">
+        
+      
+        <dt id="CANCELLING">CANCELLING
+        
+        <dd class="description">
+        
+      
+        <dt id="COMPLETE">COMPLETE
+        
+        <dd class="description">
+        
+      
+        <dt id="DESTROYED">DESTROYED
+        
+        <dd class="description">
+        
+      
+        <dt id="FAILED">FAILED
+        
+        <dd class="description">
+        
+      
+        <dt id="FAILING">FAILING
+        
+        <dd class="description">
+        
+      
+        <dt id="FINISHED">FINISHED
+        
+        <dd class="description">
+        
+      
+        <dt id="INITIALISING">INITIALISING
+        
+        <dd class="description">
+        
+      
+        <dt id="NEW">NEW
+        
+        <dd class="description">
+        
+      
+        <dt id="PAUSED">PAUSED
+        
+        <dd class="description">
+        
+      
+        <dt id="QUEUED">QUEUED
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
 
-		
-			<div id="finished--method" class="method-detail ">
-				<a name="M000021"></a>
+    
 
-				<div class="method-heading">
-				
-					<span class="method-name">finished?</span><span
-						class="method-args">(status)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
 
-				<div class="method-description">
-					
-					<p>
-Return True if the status is a finished status.
-</p>
-<p>
-This would normally include <a href="Status.html#COMPLETE">COMPLETE</a>, <a
+    
+      <div id="method-c-finished-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">finished?</span><span
+            class="method-args">(status)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return True if the status is a finished status.</p>
+
+<p>This would normally include <a href="Status.html#COMPLETE">COMPLETE</a>, <a
 href="Status.html#CANCELLED">CANCELLED</a>, <a
 href="Status.html#DESTROYED">DESTROYED</a> and <a
-href="Status.html#FAILED">FAILED</a>.
-</p>
-					
+href="Status.html#FAILED">FAILED</a>.</p>
+          
 
-					
-					<div class="method-source-code"
-						id="finished--source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/enactor/client.rb, line 76</span>
-76:         <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Status</span>.<span class="ruby-identifier">finished?</span>(<span class="ruby-identifier">status</span>)
-77:             <span class="ruby-keyword kw">return</span> <span class="ruby-constant">FINISHED</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">status</span>)
-78:         <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+          
+          <div class="method-source-code" id="finished-3F-source">
+            <pre><span class="ruby-comment"># File lib/enactor/client.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Status</span>.<span class="ruby-identifier">finished?</span>(<span class="ruby-identifier">status</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">FINISHED</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">status</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- finished-3F-source -->
+          
+        </div>
 
-				
-			</div>
+        
 
-		
-			<div id="valid--method" class="method-detail ">
-				<a name="M000022"></a>
+        
+      </div><!-- finished-3F-method -->
 
-				<div class="method-heading">
-				
-					<span class="method-name">valid?</span><span
-						class="method-args">(status)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+    
+      <div id="method-c-valid-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">valid?</span><span
+            class="method-args">(status)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
 
-				<div class="method-description">
-					
-					<p>
-Check if a string is a valid status.
-</p>
-					
+        <div class="method-description">
+          
+          <p>Check if a string is a valid status.</p>
+          
 
-					
-					<div class="method-source-code"
-						id="valid--source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/enactor/client.rb, line 81</span>
-81:         <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Status</span>.<span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">status</span>)
-82:             <span class="ruby-constant">ALL</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">status</span>)
-83:         <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+          
+          <div class="method-source-code" id="valid-3F-source">
+            <pre><span class="ruby-comment"># File lib/enactor/client.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Status</span>.<span class="ruby-identifier">valid?</span>(<span class="ruby-identifier">status</span>)
+    <span class="ruby-constant">ALL</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">status</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- valid-3F-source -->
+          
+        </div>
 
-				
-			</div>
+        
 
-		
-		</div>
-	
+        
+      </div><!-- valid-3F-method -->
 
-	</div>
+    
+    </section><!-- public-class-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
 
 
-	<div id="rdoc-debugging-section-dump" class="debugging-section">
-	
-		<p>Disabled; run with --debug to generate this.</p>
-	
-	</div>
-
-	<div id="validator-badges">
-		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-			Rdoc Generator</a> 1.1.6</small>.</p>
-	</div>
-
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 
