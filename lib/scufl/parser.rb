@@ -158,6 +158,9 @@ module Scufl
             when 'mergemode'
             when 'defaults'
             when 'iterationstrategy'
+            when 'stringconstant'
+              processor.type = e.name
+              processor.value = e.text
             else
             if Dot.is_processor? e.name
               processor.type = e.name

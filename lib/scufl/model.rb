@@ -226,6 +226,9 @@ module Scufl # :nodoc:
     
     # Category for the biomoby service.
     attr_accessor :biomoby_category
+
+    # Value of a string constant
+    attr_accessor :value
   end
 
 
